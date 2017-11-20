@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_list"
+            android:icon="@drawable/ic_dashboard"
+            android:title="Lista de denuncias" />
+        <item
+            android:id="@+id/nav_new"
+            android:icon="@drawable/ic_create"
+            android:title="Agregar Denuncia" />
+
+    </group>
+
+    <item android:title="Logout">
+        <menu>
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_logout"
+                android:title="Salir" />
+        </menu>
+    </item>
+
+</menu>
