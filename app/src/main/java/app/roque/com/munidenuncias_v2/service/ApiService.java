@@ -53,8 +53,8 @@ public interface ApiService {
     Call<Denuncia> showDenuncias(@Path("id") Integer id);
 
     @FormUrlEncoded
-    @POST("/api/v1/denuncias")
-    Call<ResponseMessage> createDenuncia(@Field("usuarios_id") String usuarios_id,
+    @POST("/api/v1/usuarios/{id}/denuncias")
+    Call<ResponseMessage> createDenuncia(@Path ("id") String id,
                                          @Field("titulo") String titulo,
                                          @Field("descripcion") String descripcion,
                                          @Field("ubicacion") String ubicacion,
@@ -63,9 +63,9 @@ public interface ApiService {
                                          );
 
     @Multipart
-    @POST("/api/v1/denuncias")
+    @POST("/api/v1/usuarios/{id}/denuncias")
     Call<ResponseMessage> createDenunciaWithImage(
-            @Part("usuarios_id") RequestBody usuarios_id,
+            @Path ("id") String id,
             @Part("titulo") RequestBody titulo,
             @Part("descripcion") RequestBody descripcion,
             @Part("ubicacion") RequestBody address,

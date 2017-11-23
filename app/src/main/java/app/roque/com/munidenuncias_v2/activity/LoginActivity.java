@@ -40,9 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.login_button);
         btnGoRegister = (Button) findViewById(R.id.goRegister_button);
 
-        // Progress dialog
-        pDialog = new ProgressDialog(this);
-        pDialog.setCancelable(false);
+
 
         // init SharedPreferences
         sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
@@ -136,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                         // Save to SharedPreferences
                         SharedPreferences.Editor editor = sharedPreferences.edit();
                         boolean success = editor
-                                .putInt("usuario_id", usuario_id)
+                                .putString("usuario_id", String.valueOf(usuario_id))
                                 .putString("username", username)
                                 .putString("nombres", nombres)
                                 .putString("correo", correo)

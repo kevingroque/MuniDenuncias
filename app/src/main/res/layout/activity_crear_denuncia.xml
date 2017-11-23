@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content">
 
                 <android.support.design.widget.TextInputEditText
-                    android:id="@+id/descricion_input"
+                    android:id="@+id/descripcion_input"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
@@ -121,7 +121,7 @@
                     android:onClick="takePicture"/>
 
                 <ImageView
-                    android:id="@+id/imagen_preview"
+                    android:id="@+id/imagenDenuncia"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_alignParentEnd="true"
@@ -134,7 +134,7 @@
                 android:layout_height="wrap_content"
                 android:text="Registrar"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:onClick="callRegister"/>
+                android:onClick="callRegisterDenuncia"/>
 
             <Button
                 android:id="@+id/btnGoMap"
